@@ -49,8 +49,8 @@ const TransactionsList = () => {
                                 {/* Format date using dayjs */}
                                 <td className="py-2 px-4 border-b">{dayjs(txn.date).format('DD/MM/YYYY')}</td>
                                 <td className="py-2 px-4 border-b">{txn.description}</td>
-                                <td className="py-2 px-4 border-b">{txn.credit}</td>
-                                <td className="py-2 px-4 border-b">{txn.debit}</td>
+                                <td className="py-2 px-4 border-b">{txn.credit || '-'}</td>
+                                <td className="py-2 px-4 border-b">{txn.debit || '-'}</td>
                                 <td className="py-2 px-4 border-b">{txn.balance}</td>
                             </tr>
                         )) :
